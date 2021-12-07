@@ -9,8 +9,7 @@ with open("input.txt") as f:
     fish = deque(counter[x] for x in range(9))
 
 for day in range(256):
-    old_0 = fish[0]
     fish.rotate(-1)
-    fish[6] += old_0
+    fish[6] += fish[8]
 
 print(sum(fish))
