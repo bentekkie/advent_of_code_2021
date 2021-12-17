@@ -47,5 +47,9 @@ with open("fold_input.txt") as f:
 for instruction in instructions:
     grid = {p for p in fold(grid, instruction)}
 
-print("\n".join("".join("X" if Point(x, y) in grid else " " for x in range(min(x for x, _ in grid), max(
-    x for x, _ in grid) + 1)) for y in range(min(y for _, y in grid), max(y for _, y in grid) + 1)))
+print(
+    "\n".join(
+        "".join(
+            "X" if Point(x, y) in grid else " "
+            for x in range(min(x for x, _ in grid), max(x for x, _ in grid) + 1))
+        for y in range(min(y for _, y in grid), max(y for _, y in grid) + 1)))
