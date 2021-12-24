@@ -1,3 +1,5 @@
 input.txt
 fold_input.txt
 *.code-workspace
+__pycache__
+alu.py
